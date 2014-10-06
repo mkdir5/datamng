@@ -1,0 +1,6 @@
+all <- c(1:4601)
+seventyPercentOfAll <- sort(unique(sample(4601, (0.7*4601))))
+restOfAll <- all[-seventyPercentOfAll]
+
+TrainingSpambase <- Spambase[seventyPercentOfAll,]
+TestSpambase <- Spambase[restOfAll,]
